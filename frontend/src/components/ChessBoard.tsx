@@ -163,6 +163,7 @@ export function ChessBoard({
 				// setTo(getSquareNotation(row, col));
 				setDraggedPiece(null);
 				draw();
+
 				socket.send(
 					JSON.stringify({ type: MOVE, move: { from: from, to: getSquareNotation(row, col) } }),
 				);
